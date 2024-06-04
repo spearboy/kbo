@@ -21,14 +21,14 @@ const App = () => {
       <Main>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/' element={<Melon/>}/>
-          <Route path='/' element={<Bugs/>}/>
-          <Route path='/' element={<Apple/>}/>
-          <Route path='/' element={<Ginie/>}/>
-          <Route path='/' element={<Bill/>}/>
-          <Route path='/' element={<Recent/>}/>
-          <Route path='/' element={<Favorites/>}/>
-          <Route path='/' element={<Mymusic/>}/>
+          <Route path='/melon' element={<Melon/>}/>
+          <Route path='/bugs' element={<Bugs/>}/>
+          <Route path='/apple' element={<Apple/>}/>
+          <Route path='/ginie' element={<Ginie/>}/>
+          <Route path='/bill' element={<Bill/>}/>
+          <Route path='/recent' element={<Recent/>}/>
+          <Route path='/favorites' element={<Favorites/>}/>
+          <Route path='/mymusic' element={<Mymusic/>}/>
         </Routes>
       </Main>
       <Aside/>
