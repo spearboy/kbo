@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-function App() {
+import Header from './components/Header'
+import Main from './components/Main'
+import Aside from './components/Aside'
+import Home from './pages/Home'
+import Melon from './pages/Melon'
+import Bugs from './pages/Bugs'
+import Apple from './pages/Apple'
+import Ginie from './pages/Ginie'
+import Bill from './pages/Bill'
+import Recent from './pages/Recent'
+import Favorites from './pages/Favorites'
+import Mymusic from './pages/Mymusic'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Header/>
+      <Main>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Melon/>}/>
+          <Route path='/' element={<Bugs/>}/>
+          <Route path='/' element={<Apple/>}/>
+          <Route path='/' element={<Ginie/>}/>
+          <Route path='/' element={<Bill/>}/>
+          <Route path='/' element={<Recent/>}/>
+          <Route path='/' element={<Favorites/>}/>
+          <Route path='/' element={<Mymusic/>}/>
+        </Routes>
+      </Main>
+      <Aside/>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
